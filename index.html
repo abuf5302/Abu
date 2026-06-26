@@ -30,7 +30,6 @@
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
     import { getFirestore, collection, addDoc, query, orderBy, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-    // 1. YOUR FIREBASE CONFIG - 100% CORRECT NOW
     const firebaseConfig = {
       apiKey: "AIzaSyAw9T3VjEDdC...", 
       authDomain: "abufastooth.firebaseapp.com",
@@ -45,7 +44,6 @@
     const msgsRef = collection(db, "messages");
     const q = query(msgsRef, orderBy("time", "asc"));
 
-    // 2. REAL-TIME CHAT
     const messagesEl = document.getElementById("messages");
     const nameEl = document.getElementById("nameEl");
     const textEl = document.getElementById("textEl");
@@ -63,7 +61,6 @@
       messagesEl.scrollTop = messagesEl.scrollHeight;
     });
 
-    // 3. SEND MESSAGE
     sendBtn.onclick = async () => {
       const name = nameEl.value.trim();
       const text = textEl.value.trim();
