@@ -34,17 +34,15 @@
 
   
 <script type="module">
-  const firebaseConfig = {
-    apiKey: "AIzaSyAw9T3VjEDdC...",     authDomain: "abufastooth.firebaseapp.com",
-    storageBucket: "abufastooth.appspot.com",
-    42 messagingSenderId: "487141933695", 
-43 appId: "1:487141933695:web:0d9c563eb716586d4c754a"
-  // ↑↑ COPY THE WHOLE BLOCK FROM YOUR SCREEN ↑↑
-
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-  const msgsRef = collection(db, "messages");
-  const q = query(msgsRef, orderBy("time", "asc"));
+ const firebaseConfig = {
+   apiKey: "AIzaSyAw9T3VjEDdC...", 
+ 
+   authDomain: "abufastooth.firebaseapp.com",
+  projectId: "abufastooth",
+   storageBucket: "abufastooth.appspot.com",
+  messagingSenderId: "487141933695",
+   appId: "1:487141933695:web:0d9c563eb7"
+ };
 
   const messagesEl = document.getElementById('messages');
   const nameEl = document.getElementById('name');
